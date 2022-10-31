@@ -39,7 +39,7 @@ contract Token {
         public 
         returns (bool success) 
     {
-        require(balanceOf[msg.sender] > _value);
+        require (balanceOf[msg.sender] >= _value);
 
         _transfer(msg.sender, _to, _value);
 
